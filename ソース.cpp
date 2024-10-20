@@ -1,4 +1,4 @@
-#include <stdio.h>
+/** /#include <stdio.h>
 #include <stdint.h>
 
 #include "Lightflow3D.h"
@@ -12,11 +12,6 @@ struct Lightflow {
 	//T Color;
 };
 
-struct RGB24 {
-	uint8_t B=0;
-	uint8_t G=0;
-	uint8_t R=0;
-};
 
 template<class T>
 Lightflow ConstructLightFlow<T>(Point3D<double>& Light, Point3D<double>& Look, T& Color) {
@@ -35,7 +30,15 @@ bool free(Lightflow& In) {
 
 	return true;
 }
+/**/
 
+#include "LightFlow.h"
+
+struct RGB24 {
+	uint8_t B=0;
+	uint8_t G=0;
+	uint8_t R=0;
+};
 int main() {
 	Point3D<double> L = ConstructPoint3D<double>(0, 0, 0);
 	Point3D<double> C = ConstructPoint3D<double>(0, 0, 8);
