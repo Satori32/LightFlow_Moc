@@ -13,6 +13,7 @@ struct Lightflow {
 	Point3D<double> Look;
 	Any Color;
 	//T Color;
+	double Velocity = 0;
 };
-template<class T> Lightflow ConstructLightFlow<T>(Point3D<double>& Light, Point3D<double>& Look, T& Color);
+template<class T> Lightflow ConstructLightFlow<T>(Point3D<double>& Light,double Velocity, Point3D<double>& Look, T& Color);
 /* template<class T> */ bool free(Lightflow& In)

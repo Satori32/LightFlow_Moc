@@ -7,6 +7,7 @@ Lightflow ConstructLightFlow<T>(Point3D<double>& Light, Point3D<double>& Look, T
 	L.Light = Light;
 	L.Look = Look;
 	L.Color = Color;
+	L.Velocity = 1;
 	return L;
 }
 //template<class T>
@@ -14,6 +15,7 @@ bool free(Lightflow& In) {
 	Free(In.Light);
 	Free(In.Look);
 	Free(In.Color);
+	Free(In.Velocity);
 
 	return true;
 }
